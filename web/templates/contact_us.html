@@ -1,0 +1,132 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+    <!-- med_tittle_section-->
+    <div class="med_tittle_section">
+        <div class="med_img_overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="med_tittle_cont_wrapper">
+                        <div class="med_tittle_cont">
+                            <h1>Contact Us</h1>
+                            <ol class="breadcrumb">
+                                <li><a href="index.html">Home</a>
+                                </li>
+                                <li>Contact</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- med_tittle_section End-->
+    <!--contact us section start -->
+    <div class="contact_us_section med_toppadder100 med_bottompadder70">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+                    <div class="choose_heading_wrapper med_bottompadder30">
+                        <h1 class="med_bottompadder20">Contact us</h1>
+                        <img src="{% static 'images/line.png' %}" alt="title" class="med_bottompadder20">
+                        <p>You can Easily Contact with us and get your appointment</p>
+                    </div>
+
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="cont_main_section">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                                    <div class="contect_form1 dc_cont_div">
+                                        <input type="text" name="full_name" placeholder="Full Name" class="require">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                                    <div class="contect_form1 dc_cont_div">
+                                        <input type="text" name="email" placeholder="Email" class="require" data-valid="email" data-error="Email should be valid.">
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="contect_form1 dc_cont_div">
+                                        <input type="text" name="subject" placeholder="Subject">
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="contect_form4 dc_cont_div">
+                                        <textarea rows="5" name="message" placeholder="Message" class="require"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                                    <div class="response"></div>
+                                    <div class="contact_btn_wrapper med_toppadder30">
+                                        <button type="submit" class="submitForm">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--contact us section end-->
+    <!-- dc category section start-->
+    <div class="category_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                    <div class="cat_about cont_cat_abt">
+                        <div class="icon_wrapper dc_icon_section">
+                            <img src="{% static 'images/icon_map.png' %}" alt="img" class="img-responsive">
+                        </div>
+
+                        <div class="cat_txt cont_cat_txt">
+                            <h1>Address</h1>
+                            <p>Fateh Sher Road, Fateh Sher Colony, Sahiwal</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                    <div class="cat_about cont_cat_abt">
+                        <div class="icon_wrapper dc_icon_section">
+                            <img src="{% static 'images/icon_call.png' %}" alt="img" class="img-responsive">
+                        </div>
+
+                        <div class="cat_txt cont_cat_txt">
+                            <h1>0321 7023307</h1>
+                            <p>Mon-Fri 8:30am - 9:30pm</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                    <div class="cat_about cont_cat_abt">
+                        <div class="icon_wrapper dc_icon_section">
+                            <img src="{% static 'images/icon_envelope.png' %}" alt="img" class="img-responsive">
+                        </div>
+
+                        <div class="cat_txt cont_cat_txt cont_last_child">
+                            <a href="#"><h1>drhamidrauf@gmail.com</h1></a>
+                            <p>24 / 7online help support</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map_main_wrapper cont_dc_map">
+            <div id="map" style="width:100%; float:left; height:600px;"></div>
+        </div>
+    </div>
+    <!-- dc category section end-->
+    <!--news section start-->
+  
+   
+    {% endblock %}
